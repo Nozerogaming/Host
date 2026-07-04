@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VPS Hosting — KVM, NVMe, Full Root Access | SNPKK Cloud</title>
+<meta name="description" content="KVM VPS hosting on Ryzen NVMe. Full root access, dedicated vCPU cores, instant OS reinstall and anti-DDoS. Nano to Ryzen 9 tiers from ₹299/month.">
+<meta name="keywords" content="vps hosting india, kvm vps, root access vps, nvme vps, ryzen vps hosting">
+<link rel="canonical" href="https://snpkkcloud.example/vps.html">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="VPS Hosting — KVM, NVMe, Full Root Access | SNPKK Cloud">
+<meta property="og:description" content="KVM VPS on Ryzen NVMe with full root access. From ₹299/month.">
+<meta property="og:url" content="https://snpkkcloud.example/vps.html">
+<meta property="og:image" content="assets/images/og-vps.jpg">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Product",
+  "name": "VPS Hosting",
+  "brand": { "@type": "Brand", "name": "SNPKK Cloud" },
+  "offers": { "@type": "AggregateOffer", "priceCurrency": "INR", "lowPrice": "299", "highPrice": "6999", "offerCount": "7" }
+}
+</script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body class="antialiased">
+
+<!-- ================= NAV ================= -->
+<header id="site-nav" class="fixed top-0 inset-x-0 z-50 glass transition-shadow">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 h-16 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-2.5 shrink-0">
+      <span class="w-8 h-8 rounded-md bg-gradient-to-br from-[#7C3AED] to-[#3B82F6] grid place-items-center">
+        <i class="fa-solid fa-cube text-sm text-white"></i>
+      </span>
+      <span class="font-display font-bold tracking-tight text-lg">SNPKK <span class="text-[color:var(--cyan)]">Cloud</span></span>
+    </a>
+    <nav class="hidden lg:flex items-center gap-7 text-sm text-slate-300">
+      <a href="minecraft.html" class="hover:text-white transition-colors">Minecraft</a>
+      <a href="vps.html" class="text-white">VPS</a>
+      <a href="dedicated.html" class="hover:text-white transition-colors">Dedicated</a>
+      <a href="pricing.html" class="hover:text-white transition-colors">Pricing</a>
+      <a href="features.html" class="hover:text-white transition-colors">Features</a>
+      <a href="support.html" class="hover:text-white transition-colors">Support</a>
+      <a href="status.html" class="hover:text-white transition-colors flex items-center gap-1.5">
+        <span class="dot dot-live"></span> Status
+      </a>
+    </nav>
+    <div class="hidden lg:flex items-center gap-3">
+      <a href="login.html" class="text-sm text-slate-300 hover:text-white transition-colors px-3 py-2">Log in</a>
+      <a href="register.html" class="btn-primary text-sm font-medium px-4 py-2 rounded-lg text-white">Get Started</a>
+    </div>
+    <button id="nav-toggle" aria-label="Toggle menu" aria-expanded="false" class="lg:hidden w-9 h-9 grid place-items-center rounded-md border border-white/10">
+      <i class="fa-solid fa-bars text-slate-200"></i>
+    </button>
+  </div>
+  <div id="mobile-menu" class="hidden lg:hidden flex-col px-5 pb-5 gap-1 text-sm text-slate-300 border-t border-white/5">
+    <a href="minecraft.html" class="py-2.5">Minecraft</a>
+    <a href="vps.html" class="py-2.5 text-white">VPS</a>
+    <a href="dedicated.html" class="py-2.5">Dedicated</a>
+    <a href="pricing.html" class="py-2.5">Pricing</a>
+    <a href="features.html" class="py-2.5">Features</a>
+    <a href="support.html" class="py-2.5">Support</a>
+    <div class="flex gap-3 pt-3 border-t border-white/5 mt-2">
+      <a href="login.html" class="flex-1 text-center py-2.5 rounded-lg border border-white/10">Log in</a>
+      <a href="register.html" class="flex-1 text-center py-2.5 rounded-lg btn-primary text-white">Get Started</a>
+    </div>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="relative pt-40 pb-20 overflow-hidden">
+  <div class="absolute inset-0 chunk-grid"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-up">
+      <div class="inline-flex items-center gap-2 text-xs font-mono ver-pill rounded-full px-3 py-1.5 text-slate-300 mb-6">
+        <i class="fa-solid fa-lock text-[color:var(--cyan)]"></i> Full root, no shared kernel
+      </div>
+      <h1 class="font-display font-extrabold text-4xl sm:text-5xl leading-[1.1] tracking-tight">
+        Your CPU cores.<br class="hidden sm:block"> Not a fraction of someone else's.
+      </h1>
+      <p class="mt-6 text-slate-400 text-lg max-w-xl">
+        KVM virtualization on Ryzen hardware means the vCPU and RAM you pay for are actually yours — no noisy-neighbor throttling when the node next to you spikes.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-4">
+        <a href="#pricing" class="btn-primary text-white font-semibold px-6 py-3.5 rounded-xl flex items-center gap-2">
+          View VPS plans <i class="fa-solid fa-arrow-right text-sm"></i>
+        </a>
+        <a href="#os" class="btn-ghost font-medium px-6 py-3.5 rounded-xl flex items-center gap-2 text-slate-200">
+          <i class="fa-solid fa-compact-disc text-sm"></i> Pick an OS
+        </a>
+      </div>
+      <div class="mt-10 flex flex-wrap gap-x-8 gap-y-3 text-sm text-slate-400">
+        <span class="flex items-center gap-2"><i class="fa-solid fa-terminal text-[color:var(--cyan)]"></i> Full root SSH</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-arrows-rotate text-[color:var(--cyan)]"></i> 1-click OS reinstall</span>
+        <span class="flex items-center gap-2"><i class="fa-solid fa-camera text-[color:var(--cyan)]"></i> Instant snapshots</span>
+      </div>
+    </div>
+
+    <!-- signature: OS picker + terminal -->
+    <div id="os" data-aos="fade-up" data-aos-delay="150">
+      <div class="glass-strong glow-border rounded-2xl overflow-hidden">
+        <div class="flex flex-wrap gap-2 p-5 pb-0">
+          <button data-os-tab="ubuntu" class="btn-primary text-white text-xs font-medium px-3.5 py-2 rounded-lg">Ubuntu 24.04</button>
+          <button data-os-tab="debian" class="text-slate-300 text-xs font-medium px-3.5 py-2 rounded-lg border border-white/10">Debian 12</button>
+          <button data-os-tab="almalinux" class="text-slate-300 text-xs font-medium px-3.5 py-2 rounded-lg border border-white/10">AlmaLinux 9</button>
+          <button data-os-tab="windows" class="text-slate-300 text-xs font-medium px-3.5 py-2 rounded-lg border border-white/10">Windows Server</button>
+        </div>
+        <div class="p-5">
+          <div class="bg-black/50 rounded-lg overflow-hidden">
+            <div class="flex items-center gap-2 px-4 py-2.5 border-b border-white/5">
+              <span class="w-2.5 h-2.5 rounded-full bg-[#FF5F56]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#FFBD2E]"></span>
+              <span class="w-2.5 h-2.5 rounded-full bg-[#27C93F]"></span>
+              <span class="ml-2 text-xs font-mono text-slate-500">root@vps-mumbai:~</span>
+            </div>
+            <div class="p-4 font-mono text-xs leading-6 text-slate-400 min-h-[160px]">
+              <div data-os-panel="ubuntu">
+                <span class="text-emerald-400">$</span> ssh root@your-vps-ip<br>
+                Welcome to <span class="text-white">Ubuntu 24.04.2 LTS</span> (GNU/Linux 6.8.0)<br>
+                System load: 0.08&nbsp;&nbsp;&nbsp;Memory usage: 6%<br>
+                <span class="text-emerald-400">root@vps</span>:~# _
+              </div>
+              <div data-os-panel="debian" class="hidden">
+                <span class="text-emerald-400">$</span> ssh root@your-vps-ip<br>
+                Welcome to <span class="text-white">Debian GNU/Linux 12</span> (bookworm)<br>
+                System load: 0.04&nbsp;&nbsp;&nbsp;Memory usage: 4%<br>
+                <span class="text-emerald-400">root@vps</span>:~# _
+              </div>
+              <div data-os-panel="almalinux" class="hidden">
+                <span class="text-emerald-400">$</span> ssh root@your-vps-ip<br>
+                Welcome to <span class="text-white">AlmaLinux 9.4</span> (Seafoam Ocelot)<br>
+                System load: 0.06&nbsp;&nbsp;&nbsp;Memory usage: 5%<br>
+                <span class="text-emerald-400">root@vps</span>:~# _
+              </div>
+              <div data-os-panel="windows" class="hidden">
+                <span class="text-emerald-400">&gt;</span> mstsc /v:your-vps-ip<br>
+                Connecting to <span class="text-white">Windows Server 2022</span> Datacenter<br>
+                RDP session established — administrator<br>
+                <span class="text-emerald-400">C:\Users\Administrator&gt;</span> _
+              </div>
+            </div>
+          </div>
+          <p class="text-slate-500 text-xs mt-3">Reinstall the OS from the panel any time — no ticket, no waiting on a tech.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= USE CASES ================= -->
+<section class="py-24 max-w-7xl mx-auto px-5 sm:px-8">
+  <div class="max-w-2xl mb-14" data-aos="fade-up">
+    <span class="text-xs font-mono uppercase tracking-widest text-[color:var(--cyan)]">What people run on it</span>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">One VPS, whatever you're building</h2>
+  </div>
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="glass rounded-xl p-6 card-lift" data-aos="fade-up">
+      <i class="fa-brands fa-discord text-[color:var(--cyan)] mb-4 text-lg"></i>
+      <h3 class="font-semibold text-sm">Discord bots</h3>
+      <p class="text-slate-400 text-xs mt-1.5">Run Node/Python bots 24/7 without a laptop staying on.</p>
+    </div>
+    <div class="glass rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="50">
+      <i class="fa-solid fa-globe text-[color:var(--cyan)] mb-4 text-lg"></i>
+      <h3 class="font-semibold text-sm">Websites &amp; panels</h3>
+      <p class="text-slate-400 text-xs mt-1.5">Host a full stack app, a Pterodactyl panel, or a static site with room to grow.</p>
+    </div>
+    <div class="glass rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="100">
+      <i class="fa-solid fa-network-wired text-[color:var(--cyan)] mb-4 text-lg"></i>
+      <h3 class="font-semibold text-sm">Proxies &amp; networking</h3>
+      <p class="text-slate-400 text-xs mt-1.5">BungeeCord/Velocity proxies, VPNs, or a reverse proxy in front of several servers.</p>
+    </div>
+    <div class="glass rounded-xl p-6 card-lift" data-aos="fade-up" data-aos-delay="150">
+      <i class="fa-solid fa-code text-[color:var(--cyan)] mb-4 text-lg"></i>
+      <h3 class="font-semibold text-sm">Dev &amp; staging</h3>
+      <p class="text-slate-400 text-xs mt-1.5">A disposable environment to test before it touches production.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= WHY KVM ================= -->
+<section class="py-24 border-y border-white/5 bg-white/[0.015]">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div data-aos="fade-up">
+      <span class="text-xs font-mono uppercase tracking-widest text-[color:var(--cyan)]">Under the hood</span>
+      <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">Why KVM instead of containers</h2>
+      <p class="text-slate-400 mt-4 leading-relaxed">Container-based "VPS" plans oversell a shared kernel — one busy neighbor and your CPU wait time climbs. KVM gives every instance its own virtualized kernel and a hard resource ceiling, so what you provision is what you get, every hour of the month.</p>
+      <ul class="mt-6 space-y-3 text-sm text-slate-300">
+        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Dedicated vCPU cores, never oversold</li>
+        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Your own kernel — install any supported OS</li>
+        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> NVMe-backed storage with predictable IOPS</li>
+        <li class="flex items-center gap-2.5"><i class="fa-solid fa-check text-emerald-400"></i> Anti-DDoS filtering at the network edge</li>
+      </ul>
+    </div>
+    <div data-aos="fade-up" data-aos-delay="150">
+      <div class="glass rounded-2xl p-6">
+        <div class="flex items-center justify-between text-sm mb-4">
+          <span class="font-medium">Live resource ceiling</span>
+          <span class="text-emerald-400 text-xs font-mono flex items-center gap-1.5"><span class="dot dot-live"></span> enforced</span>
+        </div>
+        <div class="space-y-4">
+          <div>
+            <div class="flex justify-between text-xs text-slate-400 mb-1"><span>vCPU allocation</span><span>4 / 4 cores</span></div>
+            <div class="h-2 rounded-full bg-white/5"><div class="h-2 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]" style="width:100%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-400 mb-1"><span>RAM allocation</span><span>8 / 8 GB</span></div>
+            <div class="h-2 rounded-full bg-white/5"><div class="h-2 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]" style="width:100%"></div></div>
+          </div>
+          <div>
+            <div class="flex justify-between text-xs text-slate-400 mb-1"><span>NVMe storage</span><span>100 / 100 GB</span></div>
+            <div class="h-2 rounded-full bg-white/5"><div class="h-2 rounded-full bg-gradient-to-r from-[#7C3AED] to-[#3B82F6]" style="width:100%"></div></div>
+          </div>
+        </div>
+        <p class="text-slate-500 text-xs mt-5">This is your ceiling, not a shared pool — no neighbor can eat into it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= PRICING ================= -->
+<section class="py-24 max-w-7xl mx-auto px-5 sm:px-8" id="pricing">
+  <div class="text-center max-w-2xl mx-auto mb-10" data-aos="fade-up">
+    <span class="text-xs font-mono uppercase tracking-widest text-[color:var(--cyan)]">VPS plans</span>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">From a side-project box to a Ryzen 9 beast</h2>
+  </div>
+
+  <div class="flex justify-center mb-10" data-aos="fade-up">
+    <div class="glass rounded-full p-1 flex gap-1 text-sm">
+      <button data-cycle="monthly" class="px-4 py-2 rounded-full font-medium">Monthly</button>
+      <button data-cycle="quarterly" class="px-4 py-2 rounded-full font-medium">Quarterly</button>
+      <button data-cycle="semiannual" class="px-4 py-2 rounded-full font-medium">Semi-Annual</button>
+      <button data-cycle="annual" class="px-4 py-2 rounded-full font-medium">Annual <span class="text-emerald-400">-17%</span></button>
+    </div>
+  </div>
+
+  <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+    <div class="glass rounded-2xl p-6 card-lift" data-aos="fade-up">
+      <h3 class="font-display font-semibold">Nano</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="299">₹299</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-400"><li>1 vCPU</li><li>2GB RAM</li><li>25GB NVMe</li></ul>
+      <a href="register.html" class="btn-ghost mt-5 block text-center rounded-lg py-2.5 text-sm font-medium">Deploy</a>
+    </div>
+    <div class="glass rounded-2xl p-6 card-lift" data-aos="fade-up" data-aos-delay="50">
+      <h3 class="font-display font-semibold">Basic</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="599">₹599</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-400"><li>2 vCPU</li><li>4GB RAM</li><li>50GB NVMe</li></ul>
+      <a href="register.html" class="btn-ghost mt-5 block text-center rounded-lg py-2.5 text-sm font-medium">Deploy</a>
+    </div>
+    <div class="glass card-featured rounded-2xl p-6 card-lift glow-border relative" data-aos="fade-up" data-aos-delay="100">
+      <span class="absolute -top-3 left-6 text-[10px] font-mono uppercase tracking-wide bg-gradient-to-r from-[#7C3AED] to-[#3B82F6] px-3 py-1 rounded-full">Most picked</span>
+      <h3 class="font-display font-semibold">Plus</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="999">₹999</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-300"><li>4 vCPU</li><li>8GB RAM</li><li>100GB NVMe</li></ul>
+      <a href="register.html" class="btn-primary mt-5 block text-center rounded-lg py-2.5 text-sm font-medium text-white">Deploy</a>
+    </div>
+    <div class="glass rounded-2xl p-6 card-lift" data-aos="fade-up" data-aos-delay="150">
+      <h3 class="font-display font-semibold">Pro</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="1499">₹1,499</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-400"><li>6 vCPU</li><li>12GB RAM</li><li>160GB NVMe</li></ul>
+      <a href="register.html" class="btn-ghost mt-5 block text-center rounded-lg py-2.5 text-sm font-medium">Deploy</a>
+    </div>
+    <div class="glass rounded-2xl p-6 card-lift" data-aos="fade-up">
+      <h3 class="font-display font-semibold">Elite</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="1999">₹1,999</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-400"><li>8 vCPU</li><li>16GB RAM</li><li>240GB NVMe</li></ul>
+      <a href="register.html" class="btn-ghost mt-5 block text-center rounded-lg py-2.5 text-sm font-medium">Deploy</a>
+    </div>
+    <div class="glass rounded-2xl p-6 card-lift" data-aos="fade-up" data-aos-delay="50">
+      <h3 class="font-display font-semibold">Extreme</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="3999">₹3,999</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-400"><li>12 vCPU</li><li>32GB RAM</li><li>400GB NVMe</li></ul>
+      <a href="register.html" class="btn-ghost mt-5 block text-center rounded-lg py-2.5 text-sm font-medium">Deploy</a>
+    </div>
+    <div class="glass rounded-2xl p-6 card-lift" data-aos="fade-up" data-aos-delay="100">
+      <h3 class="font-display font-semibold">Ryzen 9</h3>
+      <div class="font-mono text-2xl font-bold mt-3"><span data-base-price="6999">₹6,999</span><span class="text-slate-500 text-xs font-sans" data-cycle-label>/month</span></div>
+      <ul class="mt-4 space-y-1.5 text-sm text-slate-400"><li>16 vCPU</li><li>64GB RAM</li><li>1TB NVMe</li></ul>
+      <a href="register.html" class="btn-ghost mt-5 block text-center rounded-lg py-2.5 text-sm font-medium">Deploy</a>
+    </div>
+  </div>
+  <p class="text-center text-slate-500 text-xs mt-8">All VPS plans include full root access, anti-DDoS, 1-click OS reinstall and API access. GST applied at checkout.</p>
+</section>
+
+<!-- ================= FAQ ================= -->
+<section class="py-24 max-w-3xl mx-auto px-5 sm:px-8">
+  <div class="mb-12" data-aos="fade-up">
+    <span class="text-xs font-mono uppercase tracking-widest text-[color:var(--cyan)]">FAQ</span>
+    <h2 class="font-display font-bold text-3xl sm:text-4xl mt-3">VPS hosting, answered</h2>
+  </div>
+  <div class="space-y-3" data-aos="fade-up">
+    <div class="glass rounded-xl overflow-hidden">
+      <button data-faq-trigger class="w-full flex items-center justify-between p-5 text-left font-medium">
+        Do I get full root/administrator access?
+        <i data-faq-icon class="fa-solid fa-plus text-slate-400 transition-transform"></i>
+      </button>
+      <div data-faq-panel class="px-5 overflow-hidden transition-all duration-300" style="max-height:0">
+        <p class="text-slate-400 text-sm pb-5">Yes — every VPS ships with full root (Linux) or administrator (Windows) access from first boot.</p>
+      </div>
+    </div>
+    <div class="glass rounded-xl overflow-hidden">
+      <button data-faq-trigger class="w-full flex items-center justify-between p-5 text-left font-medium">
+        Can I reinstall the OS later?
+        <i data-faq-icon class="fa-solid fa-plus text-slate-400 transition-transform"></i>
+      </button>
+      <div data-faq-panel class="px-5 overflow-hidden transition-all duration-300" style="max-height:0">
+        <p class="text-slate-400 text-sm pb-5">Yes, any time from the panel — pick a new OS image and the instance rebuilds in a few minutes.</p>
+      </div>
+    </div>
+    <div class="glass rounded-xl overflow-hidden">
+      <button data-faq-trigger class="w-full flex items-center justify-between p-5 text-left font-medium">
+        Is bandwidth metered?
+        <i data-faq-icon class="fa-solid fa-plus text-slate-400 transition-transform"></i>
+      </button>
+      <div data-faq-panel class="px-5 overflow-hidden transition-all duration-300" style="max-height:0">
+        <p class="text-slate-400 text-sm pb-5">Each plan includes a generous fair-use bandwidth allowance suited to its tier — support can share the exact figure for your plan.</p>
+      </div>
+    </div>
+    <div class="glass rounded-xl overflow-hidden">
+      <button data-faq-trigger class="w-full flex items-center justify-between p-5 text-left font-medium">
+        Can I upgrade to a bigger VPS later?
+        <i data-faq-icon class="fa-solid fa-plus text-slate-400 transition-transform"></i>
+      </button>
+      <div data-faq-panel class="px-5 overflow-hidden transition-all duration-300" style="max-height:0">
+        <p class="text-slate-400 text-sm pb-5">Yes, upgrade from the billing tab — resources scale up with a scheduled reboot, and we prorate the cost difference.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DISCORD CTA ================= -->
+<section class="max-w-7xl mx-auto px-5 sm:px-8 pb-24">
+  <div class="glass-strong glow-border rounded-3xl p-10 sm:p-14 text-center relative overflow-hidden" data-aos="fade-up">
+    <div class="absolute inset-0 chunk-grid opacity-60"></div>
+    <div class="relative z-10">
+      <i class="fa-brands fa-discord text-4xl text-[color:var(--cyan)] mb-5"></i>
+      <h2 class="font-display font-bold text-2xl sm:text-3xl">Not sure which VPS tier fits your workload?</h2>
+      <p class="text-slate-400 mt-3 max-w-lg mx-auto">Tell the team what you're deploying — bot, panel, proxy — and they'll size it right the first time.</p>
+      <a href="https://discord.gg/snpkkcloud" class="btn-primary inline-flex items-center gap-2 text-white font-semibold px-6 py-3.5 rounded-xl mt-7">
+        <i class="fa-brands fa-discord"></i> Ask on Discord
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="border-t border-white/5 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 grid sm:grid-cols-2 lg:grid-cols-5 gap-10">
+    <div class="lg:col-span-2">
+      <a href="index.html" class="flex items-center gap-2.5 mb-4">
+        <span class="w-8 h-8 rounded-md bg-gradient-to-br from-[#7C3AED] to-[#3B82F6] grid place-items-center">
+          <i class="fa-solid fa-cube text-sm text-white"></i>
+        </span>
+        <span class="font-display font-bold text-lg">SNPKK Cloud</span>
+      </a>
+      <p class="text-slate-400 text-sm max-w-xs">Minecraft, VPS and dedicated server hosting on Ryzen NVMe hardware, built for communities that don't tolerate lag.</p>
+      <div class="flex gap-4 mt-5 text-slate-400">
+        <a href="#" aria-label="Discord" class="hover:text-white"><i class="fa-brands fa-discord"></i></a>
+        <a href="#" aria-label="GitHub" class="hover:text-white"><i class="fa-brands fa-github"></i></a>
+        <a href="#" aria-label="YouTube" class="hover:text-white"><i class="fa-brands fa-youtube"></i></a>
+        <a href="#" aria-label="Instagram" class="hover:text-white"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" aria-label="X" class="hover:text-white"><i class="fa-brands fa-x-twitter"></i></a>
+      </div>
+    </div>
+    <div>
+      <h4 class="font-semibold text-sm mb-4">Hosting</h4>
+      <ul class="space-y-2.5 text-sm text-slate-400">
+        <li><a href="minecraft.html" class="hover:text-white">Minecraft</a></li>
+        <li><a href="vps.html" class="hover:text-white">VPS</a></li>
+        <li><a href="dedicated.html" class="hover:text-white">Dedicated</a></li>
+        <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-sm mb-4">Company</h4>
+      <ul class="space-y-2.5 text-sm text-slate-400">
+        <li><a href="about.html" class="hover:text-white">About</a></li>
+        <li><a href="features.html" class="hover:text-white">Features</a></li>
+        <li><a href="status.html" class="hover:text-white">Status</a></li>
+        <li><a href="contact.html" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold text-sm mb-4">Support</h4>
+      <ul class="space-y-2.5 text-sm text-slate-400">
+        <li><a href="support.html" class="hover:text-white">Help Center</a></li>
+        <li><a href="support.html#tickets" class="hover:text-white">Ticket System</a></li>
+        <li><a href="privacy.html" class="hover:text-white">Privacy Policy</a></li>
+        <li><a href="terms.html" class="hover:text-white">Terms</a></li>
+        <li><a href="refund.html" class="hover:text-white">Refund Policy</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="max-w-7xl mx-auto px-5 sm:px-8 mt-14 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-500">
+    <span>© <span id="year"></span> SNPKK Cloud. All rights reserved.</span>
+    <span class="flex items-center gap-4">
+      <i class="fa-brands fa-cc-stripe text-base"></i>
+      <i class="fa-brands fa-cc-paypal text-base"></i>
+      <span class="font-mono">UPI</span>
+      <span class="font-mono">Razorpay</span>
+    </span>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
